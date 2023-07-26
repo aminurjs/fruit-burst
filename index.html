@@ -6,6 +6,8 @@
     <title>Fruit Burst</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <!-- Fontawesome Kits -->
+    <script src="https://kit.fontawesome.com/e45d5c607f.js" crossorigin="anonymous"></script>
     <!-- Google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +21,7 @@
           theme: {
             extend: {
               colors: {
-                clifford: '#da373d',
+                'fruit-primary': '#F85559',
               }
             }
           }
@@ -33,8 +35,84 @@
     </style>
 </head>
 <body>
-    <header>
-
+    <header class="container max-w-[1440px] mx-auto px-4">
+        <div class="navbar my-2 lg:my-14 bg-base-200 lg:bg-fruit-primary py-2 lg:py-8 px-3 lg:px-12 lg:rounded-full">
+          <div class="navbar-start hidden lg:flex">
+            <ul class="menu menu-horizontal px-1">
+              <li><a class="text-white text-lg font-medium">Home</a></li>
+              <li><a class="text-white text-lg font-medium">About Us</a></li>
+              <li><a class="text-white text-lg font-medium">Shop</a></li>
+              <li><a class="text-white text-lg font-medium">All Fruits</a></li>
+            </ul>
+          </div> 
+          <div class="navbar-center w-1/2 lg:w-1/3">
+            <a class="hidden lg:block"><img src="./images/main-logo.png" alt=""></a>
+            <a class="block lg:hidden"><img src="./images/main-logo-black.png" alt=""></a>
+          </div>
+          <div class="relative navbar-end w-1/2 md:w-full lg:w-1/2 invisible md:visible">
+            <input class=" md:w-80 py-3 pl-8 pr-14 rounded-full outline-none" type="search" placeholder="Search here">
+            <button class="absolute top-2 right-5 text-gray-900 text-2xl " type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+          <div class="dropdown -ml-10 md:ml-0">
+            <label tabindex="0" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 -ml-44">
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="banner mb-96">
+          <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full bg-[url('./images/banner1.png')] bg-no-repeat bg-center bg-cover rounded-xl ">
+              <div class="flex items-center justify-center flex-col w-full h-full  bg-gradient-to-b from-[#121212] to-transparent pt-7 pb-7 md:pt-16 md:pb-20 lg:pt-20 lg:pb-52 rounded-xl">
+                <h1 class="text-white text-center text-2xl  md:text-5xl lg:text-7xl font-extrabold md:mb-6">Exotic tastes at your <br> doorstep</h1>
+                <p class="text-white text-center text-sm md:text-xl font-medium mb-2 md:mb-6">We supply highly quality organic products</p>
+                <a href="http://" class="btn text-white bg-fruit-primary border-0 hover:bg-fruit-primary ">Shop Now</a>
+              </div>
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle bg-slate-900 hover:bg-slate-800 text-white border-none">❮</a> 
+                <a href="#slide2" class="btn btn-circle bg-slate-900 hover:bg-slate-800 text-white border-none">❯</a>
+              </div>
+            </div> 
+            <div id="slide2" class="carousel-item relative w-full bg-[url('./images/banner2.png')]  bg-no-repeat bg-center bg-cover rounded-xl ">
+              <div class="flex items-center justify-center flex-col w-full h-full  bg-gradient-to-b from-[#121212] to-transparent pt-7 pb-7 md:pt-16 md:pb-20 lg:pt-20 lg:pb-52 rounded-xl">
+                <h1 class="text-white text-center text-2xl  md:text-5xl lg:text-7xl font-extrabold md:mb-6">Exotic tastes at your <br> doorstep</h1>
+                <p class="text-white text-center text-sm md:text-xl font-medium mb-2 md:mb-6">We supply highly quality organic products</p>
+                <a href="http://" class="btn text-white bg-fruit-primary border-0 hover:bg-fruit-primary ">Shop Now</a>
+              </div>
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle bg-slate-900 hover:bg-slate-800 text-white border-none">❮</a> 
+                <a href="#slide3" class="btn btn-circle bg-slate-900 hover:bg-slate-800 text-white border-none">❯</a>
+              </div>
+            </div> 
+            <div id="slide3" class="carousel-item relative w-full bg-[url('./images/banner3.png')] bg-no-repeat bg-center bg-cover rounded-xl ">
+              <div class="flex items-center justify-center flex-col w-full h-full  bg-gradient-to-b from-[#121212] to-transparent pt-7 pb-7 md:pt-16 md:pb-20 lg:pt-20 lg:pb-52 rounded-xl">
+                <h1 class="text-white text-center text-2xl  md:text-5xl lg:text-7xl font-extrabold md:mb-6">Exotic tastes at your <br> doorstep</h1>
+                <p class="text-white text-center text-sm md:text-xl font-medium mb-2 md:mb-6">We supply highly quality organic products</p>
+                <a href="http://" class="btn text-white bg-fruit-primary border-0 hover:bg-fruit-primary ">Shop Now</a>
+              </div>
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle bg-slate-900 hover:bg-slate-800 text-white border-none">❮</a> 
+                <a href="#slide4" class="btn btn-circle bg-slate-900 hover:bg-slate-800 text-white border-none">❯</a>
+              </div>
+            </div> 
+            <div id="slide4" class="carousel-item relative w-full bg-[url('./images/banner4.png')] bg-no-repeat bg-center bg-cover rounded-xl ">
+              <div class="flex items-center justify-center flex-col w-full h-full  bg-gradient-to-b from-[#121212] to-transparent pt-7 pb-7 md:pt-16 md:pb-20 lg:pt-20 lg:pb-52 rounded-xl">
+                <h1 class="text-white text-center text-2xl  md:text-5xl lg:text-7xl font-extrabold md:mb-6">Exotic tastes at your <br> doorstep</h1>
+                <p class="text-white text-center text-sm md:text-xl font-medium mb-2 md:mb-6">We supply highly quality organic products</p>
+                <a href="http://" class="btn text-white bg-fruit-primary border-0 hover:bg-fruit-primary ">Shop Now</a>
+              </div>
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide3" class="btn btn-circle bg-slate-900 hover:bg-slate-800 text-white border-none">❮</a> 
+                <a href="#slide1" class="btn btn-circle bg-slate-900 hover:bg-slate-800 text-white border-none">❯</a>
+              </div>
+            </div>
+          </div>
+        </div>
     </header>
     <main>
 
